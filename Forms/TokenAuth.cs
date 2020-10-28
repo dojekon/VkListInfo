@@ -26,5 +26,9 @@ namespace VkListInfo.Forms {
                 else MessageBox.Show("Непонятная ошибка");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e) {
+            System.Diagnostics.Process.Start("https://vkhost.github.io/");
+        }
     }
 }

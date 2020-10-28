@@ -65,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\VKClass.cs" />
+    <Compile Include="Forms\IDList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IDList.Designer.cs">
+      <DependentUpon>IDList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TokenAuth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\IDList.resx">
+      <DependentUpon>IDList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TokenAuth.resx">
       <DependentUpon>TokenAuth.cs</DependentUpon>
     </EmbeddedResource>

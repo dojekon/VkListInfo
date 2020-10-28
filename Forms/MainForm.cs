@@ -27,5 +27,17 @@ namespace VkListInfo {
                 MessageBox.Show(VKClass.VK.UserName() + ", авторизация успешна!");
             }
         }
+
+        private void toolStripButtonIdInput_Click(object sender, EventArgs e) {
+            IDList idList = new IDList();
+            idList.ShowDialog();
+            if (idList.DialogResult == DialogResult.OK) { MessageBox.Show("Получено " + IDList.UserList.Count + " ID"); }
+        }
+
+        private void toolStripButtonStart_Click(object sender, EventArgs e) {
+            for (int i = 0; i < IDList.UserList.Count; i++) {
+
+            }
+        }
     }
 }

@@ -32,6 +32,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStripLabelStatus = new System.Windows.Forms.ToolStripLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPhoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnOnlineTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMessageAbil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +58,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(784, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(684, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -115,18 +121,23 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 32);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnID,
+            this.ColumnPhoto,
+            this.ColumnFirstName,
+            this.ColumnLastName,
+            this.ColumnOnlineTime,
+            this.ColumnMessageAbil});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 31);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(784, 530);
+            this.dataGridView1.Size = new System.Drawing.Size(684, 530);
             this.dataGridView1.TabIndex = 1;
             // 
             // toolStripLabelStatus
@@ -147,19 +158,57 @@
             this.toolStripProgressBar1.Size = new System.Drawing.Size(106, 28);
             this.toolStripProgressBar1.Visible = false;
             // 
+            // ColumnID
+            // 
+            this.ColumnID.HeaderText = "ID";
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
+            // 
+            // ColumnPhoto
+            // 
+            this.ColumnPhoto.HeaderText = "Фото";
+            this.ColumnPhoto.Name = "ColumnPhoto";
+            this.ColumnPhoto.ReadOnly = true;
+            // 
+            // ColumnFirstName
+            // 
+            this.ColumnFirstName.HeaderText = "Имя";
+            this.ColumnFirstName.Name = "ColumnFirstName";
+            this.ColumnFirstName.ReadOnly = true;
+            // 
+            // ColumnLastName
+            // 
+            this.ColumnLastName.HeaderText = "Фамилия";
+            this.ColumnLastName.Name = "ColumnLastName";
+            this.ColumnLastName.ReadOnly = true;
+            // 
+            // ColumnOnlineTime
+            // 
+            this.ColumnOnlineTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.ColumnOnlineTime.HeaderText = "Был онлайн";
+            this.ColumnOnlineTime.Name = "ColumnOnlineTime";
+            this.ColumnOnlineTime.ReadOnly = true;
+            this.ColumnOnlineTime.Width = 92;
+            // 
+            // ColumnMessageAbil
+            // 
+            this.ColumnMessageAbil.HeaderText = "ЛС";
+            this.ColumnMessageAbil.Name = "ColumnMessageAbil";
+            this.ColumnMessageAbil.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(684, 561);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.MaximumSize = new System.Drawing.Size(700, 600);
             this.Name = "Form1";
-            this.Opacity = 0.95D;
+            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VkListInfo";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -181,6 +230,12 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonJson;
         private System.Windows.Forms.ToolStripLabel toolStripLabelStatus;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPhoto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOnlineTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMessageAbil;
     }
 }
 

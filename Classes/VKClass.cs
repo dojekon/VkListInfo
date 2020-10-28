@@ -1,6 +1,8 @@
 ﻿using VkNet;
 using VkNet.Model;
 using VkNet.Model.RequestParams;
+using VkNet.Enums.Filters;
+using System.Linq;
 
 namespace VkListInfo.Classes {
     
@@ -20,6 +22,14 @@ namespace VkListInfo.Classes {
 
         public string UserName() {
             return vkAPI.Account.GetProfileInfo().FirstName;
+        }
+
+        public dynamic GetAccountInfo(long[] id) {
+            var p = vkAPI.Users.Get(id, ProfileFields.All).ToList();
+            if (p == null)
+                return 0;
+
+            return p;
         }
 
     }

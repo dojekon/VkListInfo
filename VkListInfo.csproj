@@ -64,11 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\GetToken.cs">
+    <Compile Include="Classes\VKClass.cs" />
+    <Compile Include="Forms\TokenAuth.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\GetToken.Designer.cs">
-      <DependentUpon>GetToken.cs</DependentUpon>
+    <Compile Include="Forms\TokenAuth.Designer.cs">
+      <DependentUpon>TokenAuth.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
@@ -78,8 +79,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\GetToken.resx">
-      <DependentUpon>GetToken.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\TokenAuth.resx">
+      <DependentUpon>TokenAuth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -27,9 +27,9 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonToken = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonIdInput = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStripButtonStart = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonJson = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -62,9 +62,10 @@
             this.toolStripButtonToken.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
             this.toolStripButtonToken.Name = "toolStripButtonToken";
             this.toolStripButtonToken.Padding = new System.Windows.Forms.Padding(3);
-            this.toolStripButtonToken.Size = new System.Drawing.Size(151, 33);
-            this.toolStripButtonToken.Text = "1. Ввод токена";
+            this.toolStripButtonToken.Size = new System.Drawing.Size(158, 33);
+            this.toolStripButtonToken.Text = "1. Авторизация";
             this.toolStripButtonToken.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.toolStripButtonToken.Click += new System.EventHandler(this.toolStripButtonToken_Click);
             // 
             // toolStripButtonIdInput
             // 
@@ -78,20 +79,6 @@
             this.toolStripButtonIdInput.Padding = new System.Windows.Forms.Padding(3);
             this.toolStripButtonIdInput.Size = new System.Drawing.Size(107, 33);
             this.toolStripButtonIdInput.Text = "2. Ввод ID";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1160, 695);
-            this.dataGridView1.TabIndex = 1;
             // 
             // toolStripButtonStart
             // 
@@ -117,6 +104,20 @@
             this.toolStripButtonJson.Padding = new System.Windows.Forms.Padding(3);
             this.toolStripButtonJson.Size = new System.Drawing.Size(146, 33);
             this.toolStripButtonJson.Text = "4. Вывод Json";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(33)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 39);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1160, 695);
+            this.dataGridView1.TabIndex = 1;
             // 
             // Form1
             // 
